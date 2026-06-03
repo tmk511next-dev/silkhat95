@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<script src="pace.min.js"></script>
+<link rel="stylesheet" href="pace-theme-flash.css">
+<link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons8-96.png"> 
+<link rel="apple-touch-icon" href="icons8-198.png">
+</head><body class="pace-done ">
+<div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><font face="AomemoFont,BIZ UDP明朝,BIZ UDPゴシック">
+  <title>progress bar</title>
+  <script>
+const agent = window.navigator.userAgent.toLowerCase()
+
+if (agent.indexOf("msie") != -1 || agent.indexOf("trident") != -1) {
+  alert("ブラウザはInternet Explorerです。")
+} else if (agent.indexOf("edg") != -1 || agent.indexOf("edge") != -1) {
+  alert("ブラウザはEdgeです。")
+} else if (agent.indexOf("opr") != -1 || agent.indexOf("opera") != -1) {
+  alert("ブラウザはOperaです。")
+} else if (agent.indexOf("chrome") != -1) {
+  alert("ブラウザはChromeです。")
+} else if (agent.indexOf("safari") != -1) {
+  alert("ブラウザはSafariです。")
+} else if (agent.indexOf("firefox") != -1) {
+  alert("ブラウザはFireFoxです。")
+} else if (agent.indexOf("FxiOS") != -1) {
+  alert("ブラウザはFireFox for iOSです。")
+} else if (agent.indexOf("CriOS") != -1) {
+  alert("ブラウザはChrome for iOSです。")
+} else {
+  alert("不明なブラウザです。")
+}
+</script>
+
+
+<strong>現在時刻は  <output>取得失敗</output>
+    <script>
+
+      window.addEventListener("load",function(){
+        var ele=document.getElementsByTagName("output")[0];
+        setInterval(function(){
+          //現在時刻のDateオブジェクトを生成
+          var date2 = new Date();
+          ele.innerHTML=date2;
+      },100);
+      },false)
+    </script>です。</strong><br>
+    <hr>
+<script>
+function js1(num){    
+// まず、meter のための指定
+    var gage = document.getElementById('mtr1');
+    gage.value = num.value;
+// ココから下は コメントのための指定
+    var comment = document.getElementById('cmt');
+    if (num.value <= 512) {
+        comment.value = "ディスク残量は半分以上あります";
+    } else if (num.value > 512, num.value <= 819) {
+        comment.value = "ディスク残量が半分以下になりました";
+    } else if (num.value > 819, num.value <= 1023) {
+        comment.value = "ディスク残量が２割以下になりました";
+    } else if (num.value = 1024) {
+      comment.value = "ディスクは満杯です"
+    }
+}
+</script><style type="text/css">
+<!--
+
+-->
+</style>
+
+
+				<h3>progress bar</h3>
+				<div class="tmContNaiyo">
+				<div class="tmMargL15px">
+					<strong>現在値に対応したゲージを表示するバー</strong><br>
+					<div class="m-tag-sample">
+					<form oninput="js1(disk)">
+					<p>ディスク使用量：
+					<meter id="mtr1" value="0" min="0" max="1024" low="512" high="819" optimum="466" style="width:200px">0ＧＢ</meter>
+					：<output id="cmt">0ＧＢ</output>
+					</p>
+					<p>ディスク使用量を入力してください→ 
+					<input type="number" name="disk" placeholder="ＧＢで入力" size="1024" min="0" max="1024" style="width:80px">ＧＢ<br>
+					（0～1024ＧＢで入力してください）</p>
+					</form>
+					</div><br>
+				</div>
+				</div>
+</font><div><font face="AomemoFont,BIZ UDP明朝,BIZ UDPゴシック">
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<button onclick="clicked()">現在時刻</button>
+<script>
+  function clicked() {
+    var currentDate = new Date();
+    alert("現在時刻は" + currentDate.getHours() + "時" + currentDate.getMinutes() + "分です。");
+  }
+</script>
+<script>
+// index.htmlのService Worker登録部分
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+  .then(registration => {
+    registration.addEventListener('updatefound', () => {
+      const newWorker = registration.installing;
+
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          alert('New version is ready! Please reload!');
+        }
+      });
+    });
+  });
+}
+</script>
+
+
+
+</font></div></body></html>
