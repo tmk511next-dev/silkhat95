@@ -7,39 +7,14 @@
 <script src="pace.min.js"></script>
 <link rel="stylesheet" href="pace-theme-flash.css">
 <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons8-96.png"> 
-<link rel="apple-touch-icon" href="icons8-198.png">
-</head><body class="pace-done ">
+  <link rel="icon" href="icons8-96.bmp"> 
+<link rel="apple-touch-icon" href="icons8-198.bmp">
+</head><body class="pace-done>
 <div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
 </div>
 <div class="pace-activity"></div></div><font face="AomemoFont,BIZ UDP明朝,BIZ UDPゴシック">
   <title>progress bar</title>
-  <script>
-const agent = window.navigator.userAgent.toLowerCase()
-
-if (agent.indexOf("msie") != -1 || agent.indexOf("trident") != -1) {
-  alert("ブラウザはInternet Explorerです。")
-} else if (agent.indexOf("edg") != -1 || agent.indexOf("edge") != -1) {
-  alert("ブラウザはEdgeです。")
-} else if (agent.indexOf("opr") != -1 || agent.indexOf("opera") != -1) {
-  alert("ブラウザはOperaです。")
-} else if (agent.indexOf("chrome") != -1) {
-  alert("ブラウザはChromeです。")
-} else if (agent.indexOf("safari") != -1) {
-  alert("ブラウザはSafariです。")
-} else if (agent.indexOf("firefox") != -1) {
-  alert("ブラウザはFireFoxです。")
-} else if (agent.indexOf("FxiOS") != -1) {
-  alert("ブラウザはFireFox for iOSです。")
-} else if (agent.indexOf("CriOS") != -1) {
-  alert("ブラウザはChrome for iOSです。")
-} else {
-  alert("不明なブラウザです。")
-}
-</script>
-
-
 <strong>現在時刻は  <output>取得失敗</output>
     <script>
 
@@ -119,6 +94,34 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+</script>
+  <script>
+function agents(){
+
+const agent = window.navigator.userAgent.toLowerCase()
+
+if (agent.indexOf("msie") != -1 || agent.indexOf("trident") != -1) {
+  alert("ブラウザはInternet Explorerです。")
+} else if (agent.indexOf("edg") != -1 || agent.indexOf("edge") != -1) {
+  alert("ブラウザはEdgeです。")
+} else if (agent.indexOf("opr") != -1 || agent.indexOf("opera") != -1) {
+  alert("ブラウザはOperaです。")
+} else if (agent.indexOf("chrome") != -1) {
+  alert("ブラウザはChromeです。")
+} else if (agent.indexOf("safari") != -1) {
+  alert("ブラウザはSafariです。")
+} else if (agent.indexOf("firefox") != -1) {
+  alert("ブラウザはFireFoxです。")
+} else if (agent.indexOf("FxiOS") != -1) {
+  alert("ブラウザはFireFox for iOSです。")
+} else if (agent.indexOf("CriOS") != -1) {
+  alert("ブラウザはChrome for iOSです。")
+} else {
+  alert("不明なブラウザです。")
+}
+}
+
+window.onload = agents;
 </script>
 
 
