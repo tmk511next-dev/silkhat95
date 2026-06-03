@@ -1,10 +1,11 @@
 // Cache name
-const CACHE_NAME = 'pwa-progressbar-v2';
+const CACHE_NAME = 'pwa-progressbar-v3';
 // Cache targets
 const urlsToCache = [
   'index.html',
-  'icons8-96.png',
-  'icons8-198.png',
+  'icons8-96.bmp',
+  'icons8-198.bmp',
+  'icons8-192.png',
   'icons8-512.png',
   'pace-theme-flash.css',
   'pace.min.js',
@@ -13,6 +14,7 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', (event) => {
+    self.skipWaiting(); // 新しいSWをすぐにアクティブ化(状況で有効化)
   event.waitUntil(
     caches
       .open(CACHE_NAME)
@@ -31,9 +33,6 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
-self.addEventListener('install', (event) => {
-    self.skipWaiting(); // 新しいSWをすぐにアクティブ化(状況で有効化)
-}yy
 //  event.waitUntil(
 //    caches.keys().then(cacheNames => {
 //      return Promise.all(
